@@ -22,6 +22,8 @@ rosdep update
 grep -F 'source /opt/ros/indigo/setup.bash' ~/.bashrc ||
 echo 'source /opt/ros/indigo/setup.bash' >> ~/.bashrc
 
+source /opt/ros/indigo/setup.bash
+
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
