@@ -22,6 +22,13 @@ rosdep update
 grep -F 'source /opt/ros/indigo/setup.bash' ~/.bashrc ||
 echo 'source /opt/ros/indigo/setup.bash' >> ~/.bashrc
 
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+cd ~/catkin_ws
+catkin_make
+grep -F 'source ~/catkin_ws/devel/setup.bash' ~/.bashrc ||
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
 
 ### instruction for user ###
 set -xv
