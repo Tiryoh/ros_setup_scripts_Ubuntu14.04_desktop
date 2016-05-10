@@ -8,15 +8,11 @@ curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo ap
 sudo apt-get update
 
 sudo apt-get install -y ros-indigo-ros-base
-
-sudo rosdep init
-sudo rosdep update
-
 sudo apt-get install -y python-rosinstall
 sudo apt-get install -y make
 sudo apt-get install -y linux-headers-$(uname -r)
 
-sudo rosdep fix-permissions
+sudo rosdep init
 rosdep update
 
 grep -F 'source /opt/ros/indigo/setup.bash' ~/.bashrc ||
