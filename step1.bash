@@ -9,7 +9,7 @@ sudo apt-get update
 
 sudo apt-get install -y ros-indigo-ros-base
 sudo apt-get install -y python-rosinstall
-sudo apt-get install -y make
+sudo apt-get install -y build-essential
 sudo apt-get install -y linux-headers-$(uname -r)
 
 sudo rosdep init
