@@ -6,7 +6,7 @@ sudo: required
 dist: trusty
 language:
   - generic
-  cache:
+cache:
   - apt
 
 env:
@@ -28,3 +28,6 @@ script:
   - bash -e ./step0.bash
   - bash -e ./step1.bash
 
+after_failure:
+  - cat "/home/travis/catkin_ws/build/CMakeFiles/CMakeOutput.log"
+  - cat "/home/travis/catkin_ws/build/CMakeFiles/CMakeError.log"
