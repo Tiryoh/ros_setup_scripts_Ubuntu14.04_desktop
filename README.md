@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server.svg?branch=master)](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server)
+[![Build Status](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_server.svg?branch=master)](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_server)
 
 # ros_setup_scripts_Ubuntu14.04
 
 ROS setup scripts for Ubuntu 14.04
+forked from [ryuichiueda/ros_setup_scripts_Ubuntu14.04_server](https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server)
+
 
 # scripts
 
