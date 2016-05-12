@@ -9,23 +9,16 @@ language:
 cache:
   - apt
 
-branches:
-  only:
-    - master
-    - /^hotfix-.*$/
-
 env:
   global:
     - ROS_DISTRO=indigo
-    - CI_SOURCE_PATH=$(pwd)
-#    - ROSINSTALL_FILE=$CI_SOURCE_PATH/dependencies.rosinstall
-#    - CATKIN_OPTIONS=$CI_SOURCE_PATH/catkin.options
     - ROS_PARALLEL_JOBS='-j8 -l6'
 
 branches:
   only: 
     - master
     - dev
+    - /^hotfix-.*$/
 
 script:
 #  - export DEBIAN_FRONTEND=noninteractive
