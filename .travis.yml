@@ -9,6 +9,11 @@ language:
 cache:
   - apt
 
+branches:
+  only:
+    - master
+    - /^hotfix-.*$/
+
 env:
   global:
     - ROS_DISTRO=indigo
