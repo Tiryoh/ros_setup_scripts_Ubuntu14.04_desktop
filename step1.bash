@@ -1,6 +1,6 @@
 #!/bin/bash -exv
 
-export ROS_DISTRO=indigo
+sudo date -s "$(curl -s --head http://www.google.co.jp | grep '^Date' | cut -b 7-)"
 
 echo 'deb http://packages.ros.org/ros/ubuntu trusty main' > /tmp/$$-deb
 sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
@@ -11,7 +11,7 @@ sudo apt-get update
 
 sudo apt-get install -y ros-indigo-ros-base
 sudo apt-get install -y python-rosinstall
-sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-$ROS_DISTRO-catkin
+#sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-indigo-catkin
 sudo apt-get install -y build-essential
 sudo apt-get install -y linux-headers-$(uname -r)
 
