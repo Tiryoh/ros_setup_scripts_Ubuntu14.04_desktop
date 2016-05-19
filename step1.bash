@@ -1,5 +1,7 @@
 #!/bin/bash -exv
 
+sudo date -s "$(curl -s --head http://www.google.co.jp | grep '^Date' | cut -b 7-)"
+
 echo 'deb http://packages.ros.org/ros/ubuntu trusty main' > /tmp/$$-deb
 sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
 
