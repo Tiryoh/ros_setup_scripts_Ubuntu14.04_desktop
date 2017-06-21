@@ -15,8 +15,8 @@ sudo date -s "$(curl -s --head http://www.google.co.jp | grep '^Date' | cut -b 7
 
 ### cloning this repository ###
 
-git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server.git
+git clone https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop.git
 
 # If your git gives a SSL error, please try this.  ###
-#GIT_SSL_NO_VERIFY=1 git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server.git
+#GIT_SSL_NO_VERIFY=1 git clone https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop.git
 
