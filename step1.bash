@@ -6,11 +6,11 @@ curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo ap
 
 sudo apt-get update
 
+sudo apt-get install -y build-essential
 sudo apt-get install -y ros-indigo-desktop-full
 sudo apt-get install -y python-rosinstall
 #sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-indigo-catkin
-sudo apt-get install -y build-essential
-sudo apt-get install -y linux-headers-$(uname -r)
+#sudo apt-get install -y linux-headers-$(uname -r)
 
 sudo rosdep init
 rosdep update
@@ -18,7 +18,13 @@ rosdep update
 grep -F 'source /opt/ros/indigo/setup.bash' ~/.bashrc ||
 echo 'source /opt/ros/indigo/setup.bash' >> ~/.bashrc
 
-source /opt/ros/indigo/setup.bash
+grep -F 'ROS_MASTER_URI' ~/.bashrc ||
+echo 'export ROS_MASTER_URI=http://localhost:11311' >> ~/.bashrc
+
+grep -F 'ROS_HOSTNAME' ~/.bashrc ||
+echo 'export ROS_HOSTNAME=localhost' >> ~/.bashrc
+
+#source /opt/ros/indigo/setup.bash
 
 ### instruction for user ###
 set -xv
