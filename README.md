@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_server.svg?branch=master)](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_server)
+[![Build Status](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop.svg?branch=master)](https://travis-ci.org/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop)
 
 # ros_setup_scripts_Ubuntu14.04
 
@@ -18,5 +18,4 @@ It installs ROS. Roscore will run if all procedures in this script are completed
 
 # tested on ...
 
-* Ubuntu 14.04 Server on Raspberry Pi 2
-* Ubuntu 14.04 Server on Virtual Box
+* Ubuntu Desktop 14.04
