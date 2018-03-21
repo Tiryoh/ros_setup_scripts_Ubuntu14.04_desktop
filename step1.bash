@@ -15,8 +15,6 @@ sudo apt-get install -y python-rosinstall
 sudo rosdep init
 rosdep update
 
-grep -F 'source /opt/ros/indigo/setup.bash' ~/.bashrc ||
-echo 'source /opt/ros/indigo/setup.bash' >> ~/.bashrc
 
 grep -F 'ROS_MASTER_URI' ~/.bashrc ||
 echo 'export ROS_MASTER_URI=http://localhost:11311' >> ~/.bashrc
@@ -24,7 +22,15 @@ echo 'export ROS_MASTER_URI=http://localhost:11311' >> ~/.bashrc
 grep -F 'ROS_HOSTNAME' ~/.bashrc ||
 echo 'export ROS_HOSTNAME=localhost' >> ~/.bashrc
 
-#source /opt/ros/indigo/setup.bash
+source /opt/ros/indigo/setup.bash
+
+mkdir -p ~/catkin_ws/src && cd ~/catkin_ws && catkin_init_workspace src
+
+catkin_make && source ~/catkin_ws/devel/setup.bash
+
+grep -F 'source ~/catkin_ws/devel/setup.bash' ~/.bashrc ||
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
+
 
 ### instruction for user ###
 set -xv
